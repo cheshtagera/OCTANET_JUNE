@@ -1,141 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppons', sans-serif;
+    box-sizing: border-box;
 }
 
 .container{
-    max-width: 80vw;
-    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(145deg, #530258, #220962, #206b8b, #0cccda);
+    padding: 10px;
 }
 
-.navbar{
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h1{
+    color: #002765;
     display: flex;
-    height: 67px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.navbar li{
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945 ;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+}
+
+ul li{
     list-style: none;
-    margin: 0 12px;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
 }
 
-.topleft{
-    width: 50%;
+ul li::before{
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
 
-.topright{
-    width: 50%;
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
 }
 
-.Section1{
-    max-height: 100vh; 
-    color: #802015;
-}
- 
-.Section1 h1{
-     color: #40110c;
-     font-size: 2rem;
-}
- 
-.logo{
-     font-size: 1.3rem;
-}
- 
-.dumbelling{
-     width: 289px;
-}
- 
-.topright.gymimg{
-     width: 466px;
- }
- 
-.Section2{
-     padding: 73px;
-}
- 
-.Section2 h1{
-     font-size: 2.3rem;
-}
- 
-.Section2 p{
-     padding: 0 8vw;
-     text-align: center;
-}
- 
-.box{
-     padding: 8px 0;
-     margin: 12px 22px;
-     min-width: 20vw;
-     border: 2px solid rgb(120, 54, 16);
-     border-radius: 8px;
-     text-align: center;
-}
- 
-.box h2{
-     font-size: 2rem;
-     padding: 15px 0;
-}
- 
-.highlighted{
-     font-size: 1.2rem;
-     font-weight: bolder;
-}
- 
-.box ul{
-     list-style-type: none;
-}
- 
-.box ul li{
-    margin: 12px 2px;
-}
- 
-.plantable{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
- 
-.Section3 table{
-     width: 100%;
-     margin-bottom: 140px;
-     margin-top: 20px;
-     border-collapse: collapse;
-}
- 
-.Section3 table th{ 
-     width: 23vw; 
-     border-bottom: 2px solid black;
-     padding: 15px 0;
-} 
- 
-.Section3 table td{   
-     border-bottom: 2px solid black; 
-} 
-  
- 
-.Section3 h1{
-     font-size: 2.3rem;
-}
- 
-.Section3{
-     padding: 73px;
-}
- 
-footer{
-     padding: 23px;
-     text-align: center;
+ul li.checked::before{
+    background-image: url(checked.png);
 }
 
-.buttons{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin: 12px;
+ul li span{
+    position:absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
 }
- 
-.deal{
-     font-size: 1.2rem;
-     font-weight: bolder;
-     margin: 12px 0;
+
+ul li span:hover{
+    background: #edeef0;
 }
